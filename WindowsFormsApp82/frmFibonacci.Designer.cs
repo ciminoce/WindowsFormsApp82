@@ -126,9 +126,14 @@ namespace WindowsFormsApp82
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.nNumericUpDown);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(380, 562);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(380, 562);
             this.Name = "frmFibonacci";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Serie de Fibonacci";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFibonacci_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.nNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

@@ -58,5 +58,15 @@ namespace WindowsFormsApp82
             fibonacciListBox.Items.Clear();
             InicializarControles();
         }
+
+        private void frmFibonacci_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("¿Desea salir del programa?", "Confirmar",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (dr==DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
